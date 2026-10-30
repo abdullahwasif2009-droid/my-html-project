@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Catalog — Abdullah</title>
+  <link href="styles.css" rel="stylesheet">
+  <meta name="description" content="Abdullah catalog — browse the full menswear collection" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Abdullah</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <button class="cart-btn" id="open-cart" aria-label="Open cart">Cart <span id="cart-count">0</span></button>
+  </header>
+
+  <main>
+    <section class="products-section">
+      <div class="section-header">
+        <h2>All Products</h2>
+        <div class="filters">
+          <select id="filter-select">
+            <option value="all">All</option>
+            <option value="jackets">Jackets</option>
+            <option value="shirts">Shirts</option>
+            <option value="pants">Pants</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- populated by scripts.js -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Abdullah</p>
+    <p>Contact: <a href="mailto:info@abdullah.com">info@abdullah.com</a> | +1 (555) 123-4567</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

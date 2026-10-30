@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abdullah — Modern Menswear Collection</title>
+  <meta name="description" content="Abdullah menswear — refined jackets, shirts, and trousers. Premium materials, modern tailoring." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">LOLEPOV</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <button class="cart-btn" id="open-cart" aria-label="Open cart">Cart <span id="cart-count">0</span></button>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="title">Refined menswear for every occasion</h1>
+        <p class="subtitle">Clean lines, premium fabrics, effortless style.</p>
+        <a class="cta" href="#shop">Explore collection</a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <img class="floating-shirt" src="https://tse4.mm.bing.net/th/id/OIP.zEq1lZLTa3twrYfYNRvrBwHaJ3?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="model wearing overcoat">
+      </div>
+    </section>
+
+    <section id="shop" class="products-section">
+      <div class="section-header">
+        <h2>Featured</h2>
+        <div class="filters">
+          <select id="filter-select">
+            <option value="all">All</option>
+            <option value="jackets">Jackets</option>  
+            <option value="shirts">Shirts</option>
+            <option value="pants">Pants</option>
+          </select>
+        </div>
+      </div>
+      <div class="products-grid" id="products-grid">
+        <!-- JS will populate product cards -->
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Abdullah</h2>
+      <p>Abdullah creates timeless menswear with an emphasis on tailoring, natural fabrics, and sustainable processes. Each piece is designed to last — in style and construction.</p>
+      <ul class="features">
+        <li>Premium natural fibers</li>
+        <li>Made with care in limited runs</li>
+        <li>Classic silhouettes, modern fit</li>
+      </ul>
+    </section>
+
+    <!-- Quick view modal -->
+    <div id="product-modal" class="modal" aria-hidden="true">
+      <div class="modal-panel">
+        <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+        <div class="modal-grid">
+          <img id="modal-img" src="" alt="product image">
+          <div>
+            <h3 id="modal-title"></h3>
+            <div class="muted" id="modal-category"></div>
+            <p id="modal-desc">Fine fabric, precision tailoring, and contemporary styling.</p>
+            <div class="price" id="modal-price"></div>
+            <div class="product-options">
+              <label>Size
+                <select id="modal-size">
+                  <!-- populated dynamically -->
+                </select>
+              </label>
+              <label>Color
+                <select id="modal-color">
+                  <!-- populated dynamically -->
+                </select>
+              </label>
+              <label>Qty
+                <input id="modal-qty" type="number" min="1" value="1">
+              </label>
+            </div>
+            <div class="modal-actions">
+              <button id="modal-add" class="add-btn">Add to cart</button>
+              <button id="modal-wish" class="add-btn">Wishlist</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <header>
+      <h3>Your cart</h3>
+      <button id="close-cart" aria-label="Close cart">✕</button>
+    </header>
+    <div class="cart-items" id="cart-items"></div>
+    <footer class="cart-footer">
+      <div class="cart-summary">
+        <div>Subtotal: $<span id="cart-subtotal">0.00</span></div>
+        <div>Tax (10%): $<span id="cart-tax">0.00</span></div>
+        <div>Shipping: $<span id="cart-shipping">0.00</span></div>
+        <div class="total">Total: $<span id="cart-total">0.00</span></div>
+      </div>
+      <div class="cart-actions">
+        <a href="cart.html" class="add-btn">View cart</a>
+        <button class="checkout">Checkout</button>
+      </div>
+    </footer>
+  </aside>
+
+  <footer class="site-footer" id="contact">
+    <p>© <span id="year"></span> Abdullah — Contemporary mens clothing</p>
+    <p>Phone: +1 (555) 123-4567 &nbsp; | &nbsp; Email: <a href="mailto:info@abdullah.com">info@abdullah.com</a></p>
+    <p>Address: 1234 Elm Street, Suite 500, Cityville</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

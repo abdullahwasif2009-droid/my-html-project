@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — Abdullah</title>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">Abdullah</div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="padding:3rem;">
+      <h2>Account login</h2>
+      <p>This demo uses a local mock login (client-side only). Do not use real credentials.</p>
+      <form id="login-form" style="max-width:420px;display:grid;gap:0.6rem;">
+        <input name="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button type="submit">Sign in</button>
+      </form>
+      <div id="login-msg" style="margin-top:1rem;color:var(--muted)"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Abdullah</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
